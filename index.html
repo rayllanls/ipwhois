@@ -197,7 +197,7 @@
             </div>
         </div>
 
-        <p class="text-gray-400 mb-8 text-center">Consulte informações geográficas e de rede de um endereço IP ou nome de domínio.</p>
+        <p class="text-gray-400 mb-8 text-center">Rastreie endereços IP e domínios. Uma ferramenta essencial para sua segurança digital e análise de rede.</p>
 
         <input type="text" id="ipInput" class="w-full input-style mb-4" placeholder="Digite o IP ou nome de domínio (Ex: 8.8.8.8 ou google.com)" />
 
@@ -283,7 +283,10 @@
                 })
                 .join('\n');
 
-            navigator.clipboard.writeText(text).then(() => {
+            // Adiciona o endereço da aplicação ao final do texto.
+            const textToCopy = text + '\n\nDados encontrados em: https://rayllanls.github.io/ipwhois';
+
+            navigator.clipboard.writeText(textToCopy).then(() => {
                 alert('Resultado copiado para a área de transferência!');
             }).catch(() => {
                 alert('Erro ao copiar o resultado.');
