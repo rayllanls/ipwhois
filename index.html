@@ -13,8 +13,9 @@
             background: #0d0c1d;
             min-height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
-            /* A linha 'align-items: center;' foi removida daqui */
+            align-items: center; /* Novo: Centraliza o conteúdo horizontalmente */
             font-family: 'Poppins', sans-serif;
             color: #e0e0ff;
             margin: 16px;
@@ -29,6 +30,7 @@
             width: 90%; /* Fluid width for mobile */
             max-width: 900px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            flex-grow: 1; /* Novo: permite que o container ocupe o espaço disponível */
         }
         .container:hover {
             transform: translateY(-5px);
