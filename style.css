@@ -35,8 +35,8 @@ body {
     text-align: center;
 }
 .logo img {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 287px;
 }
 .result {
     background: #1d1a24; /* Fundo do resultado */
@@ -149,8 +149,8 @@ body {
         width: 100%;
     }
     .logo img {
-        width: 300px;
-        height: 300px;
+        width: 250px;
+        height: 287px;
     }
     .result {
         padding: 2rem;
