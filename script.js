@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .join('\n');
         
-        const textToCopy = text + '\n\nDados encontrados em: https://rayllanls.github.io/ipwhois';
+        const textToCopy = text + '\n\nDados encontrados em: https://rayllanls.github.io/rakoon';
         
         navigator.clipboard.writeText(textToCopy).then(() => {
             alert('Resultado copiado para a área de transferência!');
