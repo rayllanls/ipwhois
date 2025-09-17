@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 </head>
 <body>
     <div class="container">
@@ -16,7 +18,7 @@
             <img src="assets/img/rakoon_logo.png" alt="Rakoon Logo">
             <div>
                 <h1 class="text-3xl font-bold text-gray-100">IP Rakoon</h1>
-                <p class="text-base text-gray-400">Análise de Rede</p>
+                <p class="text-base text-gray-400">Análise de Rede e Geolocalização</p>
             </div>
         </div>
         <p class="text-gray-400 mb-8 text-center">Rastreie endereços IP e domínios. Uma ferramenta essencial para sua segurança digital e análise de rede.</p>
@@ -25,7 +27,14 @@
             <button id="searchButton" class="button-style button-search">Buscar</button>
             <button id="clearButton" class="button-style button-clear">Limpar</button>
         </div>
-        <div id="result" class="result hidden"></div>
+        
+        <div id="result" class="result">
+            <div class="result-layout">
+                <div id="map"></div>
+                <div class="result-data" id="result-data"></div>
+            </div>
+        </div>
+
         <div class="button-container">
             <button id="copyButton" class="button-style button-copy mt-4 hidden">Copiar Resultado</button>
         </div>
@@ -37,9 +46,11 @@
         <a href="index.html" class="text-gray-50 hover:text-gray-100 text-lg">Quem Somos</a>
         <span class="text-gray-500 ml-4 mr-4 text-lg">|</span>
         <a href="senhador.html" class="text-gray-50 hover:text-gray-100 text-lg">Senhador</a>
+        <span class="text-gray-500 ml-4 mr-4 text-lg">|</span>
+        <a href="decode.html" class="text-gray-50 hover:text-gray-100 text-lg">Decode</a>
     </div>
 
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="assets/js/iprakoon/iprakoon.js"></script>
 </body>
 </html>
-
