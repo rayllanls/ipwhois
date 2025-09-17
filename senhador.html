@@ -23,7 +23,7 @@
         <p class="text-gray-400 mb-8 text-center">Verifique a força, gere senhas seguras e confira se elas já foram vazadas.</p>
 
         <div class="info-section">
-            <h2 class="text-2xl font-bold text-gray-100 mb-4 text-center">Como Criar uma Senha Segura?</h2>
+            <h2 class="text-2xl font-bold text-gray-100 text-center">Como Criar uma Senha Segura?</h2>
             <p class="text-gray-300">
                 Uma senha segura é a primeira linha de defesa da sua segurança digital. O ideal é que ela tenha um <b>bom 
                 comprimento</b>, com no <b>mínimo 12 caracteres</b>. Use variedades, <b>combinando letras maiúsculas e minúsculas, números
@@ -31,22 +31,29 @@
                 E, acima de tudo, use uma senha <b>exclusiva</b> para cada serviço, protegendo-se contra vazamentos de dados.
             </p>
         </div>       
-        <div class="generator-section">          
-            <h2 class="text-2xl font-bold text-gray-100 mb-4 text-center">Teste Sua Senha</h2>
 
-        <div id="centralized-input">
-            <div class="password-input-container">
-                <input type="password" id="password-input" class="input-style" placeholder="Digite sua senha para verificar a força...">
-                <i class="toggle-password fas fa-eye" id="toggle-password"></i>
+        <div class="generator-section">          
+            <h2 class="text-2xl font-bold text-gray-100 text-center">Teste e Gere Sua Senha</h2>
+
+            <div id="centralized-input">
+                <div class="password-input-container">
+                    <input type="password" id="password-input" class="input-style" placeholder="Digite sua senha para analisar...">
+                    <i class="toggle-password fas fa-eye" id="toggle-password"></i>
+                </div>
             </div>
-        </div>
-        <div class="strength-feedback-container">
-            <div class="password-strength-meter">
-                <div class="strength-bar" id="strength-bar"></div>
+
+            <div class="feedback-area">
+                <div class="password-strength-meter">
+                    <div class="strength-bar" id="strength-bar"></div>
+                </div>
+                <div class="feedback-text-container">
+                    <span class="feedback" id="feedback">Aguardando...</span>
+                    <span class="leak-status" id="leak-status"></span>
+                </div>
             </div>
-            <p class="feedback" id="feedback">Aguardando a senha...</p>
-        </div>
-            <h2 class="text-2xl font-bold text-gray-100 mb-4 text-center">Gerador de Senha</h2>
+
+            <hr class="section-divider">
+
             <div class="generator-mode-selector">
                 <label class="mode-button">
                     <input type="radio" name="generator-type" value="random" checked>
@@ -75,28 +82,24 @@
                     </label>
                 </div>
             </div>
+            
             <div id="deterministic-options" style="display: none;">
-                <p class="text-gray-300 mb-4 text-center">Use uma senha-mestra e o nome do serviço para gerar uma senha única.</p>
+                <p class="text-gray-300 text-center">Use uma senha-mestra e o nome do serviço para gerar uma senha única.</p>
                 <input type="password" id="master-password-input" class="input-style" placeholder="Sua senha-mestra...">
-                <input type="text" id="service-name-input" class="input-style mt-4" placeholder="Nome do serviço (ex: google.com)">
+                <input type="text" id="service-name-input" class="input-style" placeholder="Nome do serviço (ex: google.com)">
             </div>
             
-            <div id="unified-output-section" class="mt-4">
-                <div class="button-container mb-4">
+            <div id="unified-output-section">
+                <div class="button-container">
                     <button id="generate-button-unified" class="button-style button-generate">Gerar!</button>
                 </div>
                 <div class="generated-password-group">
                     <input type="text" id="generated-password-output" class="input-style text-center" readonly placeholder="Senha gerada">
                 </div>
                 <div class="button-container">
-                    <button id="copy-button" class="button-style button-copy mt-4">Copiar!</button>
+                    <button id="copy-button" class="button-style button-copy">Copiar!</button>
                 </div>
             </div>
-        </div>
-        
-        <div class="leak-check-section">
-            <h2 class="text-2xl font-bold text-gray-100 mb-4 text-center">Verificação de Vazamento</h2>
-            <p class="text-gray-300 text-center">EM BREVE!</p>
         </div>
     </div>
     
@@ -106,7 +109,8 @@
         <a href="index.html" class="text-gray-50 hover:text-gray-100 text-lg">Quem Somos</a>       
         <span class="text-gray-500 ml-4 mr-4 text-lg">|</span>
         <a href="iprakoon.html" class="text-gray-50 hover:text-gray-100 text-lg">IP Rakoon</a>
- 
+        <span class="text-gray-500 ml-4 mr-4 text-lg">|</span>
+        <a href="decode.html" class="text-gray-50 hover:text-gray-100 text-lg">Decode</a>
     </div>
 
     <script type="module" src="assets/js/senhador/senhador_main.js"></script>
