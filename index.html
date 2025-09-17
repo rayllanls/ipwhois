@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <div class="container">
@@ -18,6 +19,12 @@
                 <h1 class="text-3xl font-bold text-gray-100">Rakoon CyberSec</h1>
                 <p class="text-base text-gray-400">Elite cybersecurity professionals specializing in advanced network intelligence and cybersecurity operations</p>
             </div>
+        </div>
+
+        <div class="button-group" style="margin-bottom: 2rem;">
+            <a href="iprakoon.html" class="button-style button-search">Acessar IP Rakoon</a>
+            <a href="senhador.html" class="button-style button-copy">Acessar Senhador</a>
+            <a href="decode.html" class="button-style button-generate">Acessar Decode</a>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
@@ -30,33 +37,33 @@
             </div>
             <div>
                 <h2 class="text-2xl font-bold text-gray-100 mb-4">Principais Áreas de Atuação</h2>
-                <ul class="list-disc list-inside text-gray-300 ml-4">
-                    <li class="mb-2">Operações de Red Team</li>
-                    <li class="mb-2">Inteligência de Rede</li>
-                    <li class="mb-2">Análise de OSINT</li>
-                    <li class="mb-2">Testes de Penetração</li>
-                    <li class="mb-2">Caça a Ameaças</li>
-                    <li class="mb-2">Análise Forense Digital</li>
+                <ul class="list-disc list-inside text-gray-300">
+                    <li class="mb-2"><i class="fas fa-user-secret text-red-500 mr-2"></i>Operações de Red Team</li>
+                    <li class="mb-2"><i class="fas fa-network-wired text-red-500 mr-2"></i>Inteligência de Rede</li>
+                    <li class="mb-2"><i class="fas fa-search text-red-500 mr-2"></i>Análise de OSINT</li>
+                    <li class="mb-2"><i class="fas fa-shield-alt text-red-500 mr-2"></i>Testes de Penetração</li>
+                    <li class="mb-2"><i class="fas fa-crosshairs text-red-500 mr-2"></i>Caça a Ameaças</li>
+                    <li class="mb-2"><i class="fas fa-fingerprint text-red-500 mr-2"></i>Análise Forense Digital</li>
                 </ul>
             </div>
         </div>
 
         <div class="result mt-8">
-            <h3 class="text-xl font-bold text-gray-100 mb-2 text-center">Ferramentas Para Entusiastas em Segurança da Informação</h3>
-            <p class="text-gray-400 text-center">Clique e conheça elas:</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
-                <div>
-                    <a href="iprakoon.html" class="block">
-                        <h4 class="text-lg font-bold text-gray-100 hover:text-red-500 transition-colors text-center">IP Rakoon</h4>
-                    </a>
-                    <p class="text-sm text-gray-400 mt-2 text-center">Uma ferramenta para rastrear e analisar endereços IP e domínios, essencial para investigações de rede e segurança digital.</p>
-                </div>
-                <div>
-                    <a href="senhador.html" class="block">
-                        <h4 class="text-lg font-bold text-gray-100 hover:text-purple-500 transition-colors text-center">Senhador</h4>
-                    </a>
-                    <p class="text-sm text-gray-400 mt-2 text-center">A ferramenta completa para verificar a força de suas senhas, gerá-las de forma segura e determinística, protegendo sua identidade digital.</p>
-                </div>
+            <h3 class="text-xl font-bold text-gray-100 mb-2 text-center">Nossas Ferramentas</h3>
+            <p class="text-gray-400 text-center">Clique e conheça cada uma delas:</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-4">
+                <a href="iprakoon.html" class="tool-card">
+                    <h4 class="text-lg font-bold text-gray-100 transition-colors">IP Rakoon</h4>
+                    <p class="text-sm text-gray-400 mt-2">Análise de IPs e domínios com geolocalização em mapa interativo.</p>
+                </a>
+                <a href="senhador.html" class="tool-card">
+                    <h4 class="text-lg font-bold text-gray-100 transition-colors">Senhador</h4>
+                    <p class="text-sm text-gray-400 mt-2">Suite completa para análise, geração e verificação de vazamento de senhas.</p>
+                </a>
+                <a href="decode.html" class="tool-card">
+                    <h4 class="text-lg font-bold text-gray-100 transition-colors">Decode</h4>
+                    <p class="text-sm text-gray-400 mt-2">Utilidades de criptografia e dados, incluindo calculadoras de hash e codificadores.</p>
+                </a>
             </div>
         </div>
         
@@ -71,7 +78,9 @@
         <span class="text-gray-500 ml-4 mr-4 text-lg">|</span>
         <a href="iprakoon.html" class="text-gray-50 hover:text-gray-100 text-lg">IP Rakoon</a>
         <span class="text-gray-500 ml-4 mr-4 text-lg">|</span>
-        <a href="senhador.html" class="text-gray-50 hover:text-gray-100 text-lg">Senhador</a>      
+        <a href="senhador.html" class="text-gray-50 hover:text-gray-100 text-lg">Senhador</a>
+        <span class="text-gray-500 ml-4 mr-4 text-lg">|</span>
+        <a href="decode.html" class="text-gray-50 hover:text-gray-100 text-lg">Decode</a>
     </div>
 
 </body>
