@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rakoon | Decode - Cybersecurity Tools</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="assets/img/rakoon_logo.png" alt="Rakoon Logo">
+            <div>
+                <h1 class="text-3xl font-bold text-gray-100">Decode</h1>
+                <p class="text-base text-gray-400">Ferramentas de Criptografia e Dados</p>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <div class="tabs-container">
+                <button class="tab-button active" data-tab="hash-tool">Calculadora de Hash</button>
+                <button class="tab-button" data-tab="encoder-tool">Codificador / Decodificador</button>
+            </div>
+
+            <div class="tabs-content">
+                <div id="hash-tool" class="tab-content active">
+                    <h3 class="text-xl font-bold text-gray-100 mb-4">Calculadora de Hash</h3>
+                    <p class="text-gray-400">Digite ou cole um texto abaixo para gerar seus hashes criptográficos em tempo real.</p>
+                    
+                    <textarea id="hash-input" class="input-style mt-4" rows="4" placeholder="Seu texto aqui..."></textarea>
+                
+                    <div id="hash-results-container" class="mt-4">
+                        <div class="hash-output-group">
+                            <label for="md5-output" class="hash-label">MD5</label>
+                            <input type="text" id="md5-output" class="input-style" readonly>
+                            <button class="button-style-icon copy-hash-btn" data-target="md5-output" title="Copiar MD5">
+                                <i class="far fa-copy"></i>
+                            </button>
+                        </div>
+                        <div class="hash-output-group">
+                            <label for="sha1-output" class="hash-label">SHA-1</label>
+                            <input type="text" id="sha1-output" class="input-style" readonly>
+                            <button class="button-style-icon copy-hash-btn" data-target="sha1-output" title="Copiar SHA-1">
+                                <i class="far fa-copy"></i>
+                            </button>
+                        </div>
+                        <div class="hash-output-group">
+                            <label for="sha256-output" class="hash-label">SHA-256</label>
+                            <input type="text" id="sha256-output" class="input-style" readonly>
+                            <button class="button-style-icon copy-hash-btn" data-target="sha256-output" title="Copiar SHA-256">
+                                <i class="far fa-copy"></i>
+                            </button>
+                        </div>
+                        <div class="hash-output-group">
+                            <label for="sha384-output" class="hash-label">SHA-384</label>
+                            <input type="text" id="sha384-output" class="input-style" readonly>
+                            <button class="button-style-icon copy-hash-btn" data-target="sha384-output" title="Copiar SHA-384">
+                                <i class="far fa-copy"></i>
+                            </button>
+                        </div>
+                        <div class="hash-output-group">
+                            <label for="sha512-output" class="hash-label">SHA-512</label>
+                            <input type="text" id="sha512-output" class="input-style" readonly>
+                            <button class="button-style-icon copy-hash-btn" data-target="sha512-output" title="Copiar SHA-512">
+                                <i class="far fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="encoder-tool" class="tab-content">
+                    <h3 class="text-xl font-bold text-gray-100 mb-4">Codificador / Decodificador</h3>
+                    <p class="text-gray-400">Converta textos entre diferentes formatos populares em tempo real.</p>
+                    
+                    <textarea id="encoder-input" class="input-style mt-4" rows="5" placeholder="Digite ou cole o texto aqui..."></textarea>
+                
+                    <div class="encoder-controls">
+                        <div class="control-group">
+                            <label for="encoding-format" class="control-label">Formato:</label>
+                            <select id="encoding-format" class="input-style">
+                                <option value="base64">Base64</option>
+                                <option value="url">URL (Component)</option>
+                                <option value="rot13">ROT13</option>
+                            </select>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">Direção:</label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="encoding-direction" value="encode" checked> Codificar</label>
+                                <label><input type="radio" name="encoding-direction" value="decode"> Decodificar</label>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <textarea id="encoder-output" class="input-style" rows="5" placeholder="Resultado..." readonly></textarea>
+                    
+                    <div class="button-container mt-4">
+                        <button id="copy-encoder-output" class="button-style button-copy">
+                            <i class="far fa-copy mr-2"></i>Copiar Resultado
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <span class="font-semibold text-gray-500 text-lg">Powered By Rakoon CyberSec</span> 
+        <span class="text-gray-500 ml-4 mr-4 text-lg">|</span>
+        <a href="index.html" class="text-gray-50 hover:text-gray-100 text-lg">Quem Somos</a>
+        <span class="text-gray-500 ml-4 mr-4 text-lg">|</span>
+        <a href="iprakoon.html" class="text-gray-50 hover:text-gray-100 text-lg">IP Rakoon</a>
+        <span class="text-gray-500 ml-4 mr-4 text-lg">|</span>
+        <a href="senhador.html" class="text-gray-50 hover:text-gray-100 text-lg">Senhador</a>
+    </div>
+
+    <script src="assets/js/decode/decode.js"></script>
+</body>
+</html>
